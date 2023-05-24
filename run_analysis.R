@@ -47,5 +47,5 @@ data.sum<-data %>%
     summarise_each(funs(mean))
 
 # Dump results into a csv file
-write.csv(data.sum,file = "Data Summary.csv", row.names = FALSE)
+write.table(data.sum,file = "Data Summary.txt", row.names = FALSE)
 
