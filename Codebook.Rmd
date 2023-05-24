@@ -1,0 +1,66 @@
+---
+title: "Cleaning and Getting Data: Project Code Book"
+output: html_document
+date: "2023-05-24"
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Background on the Experiment
+
+This experiment contains a
+[dataset](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones)
+which contains record of six activities carried out by a group of thirty
+people. The six activities recorded are:
+
+\- Walking
+
+\- Walking Upstairs
+
+\- Walking Downstairs
+
+\- Sitting
+
+\- Standing
+
+\- Laying
+
+Data was recorded through a smartphone worn on the waist of each
+volunteer. The sensor signals recorded data and collected them all into
+the test and trial data sets.
+
+The mean and standard deviation of recorded variables were calculated
+and added to the original data set after the initial experiment.
+
+## Data Analysis
+
+The following files from the data set were the primary sources of
+information and data for creating the tidy data set:
+
+-   'train/X_train.txt': Training set.
+
+-   'train/y_train.txt': Training labels.
+
+-   'test/X_test.txt': Test set.
+
+-   'test/y_test.txt': Test labels.
+
+-   'features.txt': List of all features
+
+-   'activity_labels.txt': Links the class labels with their activity
+    name
+
+The first four files were all combined to create the large data set. The
+features descriptions were then used to label the data columns. The
+activity labels were used to change the numeric labels to the activity
+name for categorizing all the data.
+
+the data for all the mean and standard deviations was separated for
+further analysis. This data was then grouped by subject and activity for
+an overall mean to be calculated. The calculated means were all compiled
+and stored into a new .csv file.
